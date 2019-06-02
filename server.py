@@ -26,9 +26,10 @@ def test_json():
 def qasm():
     data = request.get_json()
     qasm = data['qasm']
+    backend = data['backend']
     print("--------------")
     print(qasm)
-    backend = 'qasm_simulator'
+    print(backend)
     output = run_qasm(qasm, backend)
     ret = {"result": output}
     return jsonify(ret)
