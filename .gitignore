@@ -2,3 +2,4 @@
 .idea/Flask-Qiskit-Interface.iml
 *.xml
 *.pyc
+.ipynb_checkpoints/Test server-checkpoint.ipynb
