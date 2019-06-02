@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from api import run_qasm
+from api import run_qasm, get_statevector
 import json
 
 app = Flask(__name__)
@@ -31,6 +31,19 @@ def qasm():
     print(qasm)
     print(backend)
     output = run_qasm(qasm, backend)
+    ret = {"result": output}
+    return jsonify(ret)
+
+
+@app.route('/api/run/statevector', methods=['POST'])
+def statevector():
+    data = request.get_json()
+    qasm = data['qasm']
+    backend = data['backend']
+    print("--------------")
+    print(qasm)
+    print(backend)
+    output = get_statevector(qasm, backend)
     ret = {"result": output}
     return jsonify(ret)
 
