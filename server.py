@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from api import run_qasm, get_statevector
-import json
+import json_tricks
 
 app = Flask(__name__)
 
@@ -44,8 +44,7 @@ def statevector():
     print(qasm)
     print(backend)
     output = get_statevector(qasm, backend)
-    ret = {"result": output}
-    return jsonify(ret)
+    return json_tricks.dumps(output)  # dump complex vector as json strings
 
 
 if __name__ == '__main__':
