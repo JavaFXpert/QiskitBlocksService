@@ -22,19 +22,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return "Hi Qiskiter!"
-
-
-@app.route('/test', methods=['POST'])
-def test_json():
-    data = request.get_json()
-    qasm = data['qasm']
-    print("--------------")
-    print(qasm)
-    backend = 'qasm_simulator'
-    output = run_qasm(qasm, backend)
-    ret = {"result": output}
-    return jsonify(ret)
+    return "Hi Qiskitter!"
 
 
 @app.route('/api/run/qasm', methods=['GET'])
