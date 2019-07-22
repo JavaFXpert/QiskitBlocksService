@@ -11,4 +11,4 @@ Dependent upon the following Python libraries, which may be installed with `pip 
 To start the service, run the following from the command-line:
 `python server.py`
 
-Please reach out to james dot weaver at ibm dot com with questions or feedback.
+Please reach out to James Weaver on Qiskit Slack (located at [qiskit.org](http://qiskit.org)) with questions or feedback.
