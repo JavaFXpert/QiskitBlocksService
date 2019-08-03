@@ -29,11 +29,13 @@ def welcome():
 def qasm():
     qasm = request.args['qasm']
     backend = request.args['backend']
+    num_shots = request.args['num_shots']
     print("--------------")
     print('qasm: ', qasm)
     print('backend: ', backend)
+    print('num_shots: ', num_shots)
     print("^^^^^^^^^^^^^^")
-    output = run_qasm(qasm, backend)
+    output = run_qasm(qasm, backend, num_shots)
     ret = {"result": output}
     return jsonify(ret)
 
