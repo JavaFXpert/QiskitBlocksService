@@ -1,14 +1,16 @@
 # QiskitBlocksService
 
-Flask/Python/Qiskit based HTTP service that runs statevector and qasm simulators. Derived from works of Asier Arranz and Junye Huang.
+Flask/Python/Qiskit based HTTP service that runs Qiskit statevector and qasm simulators. Derived from works of Asier Arranz and Junye Huang.
 
-Dependent upon the following Python libraries, which may be installed with `pip install`:
+## Installation
+1. Clone this QiskitBlocksService project
+2. Run the following commands to install the required Python libraries:
 
-- qiskit
-- flask
-- json_tricks
+- `pip install qiskit`
+- `pip install flask`
+- `pip install json_tricks`
 
-To start the service, run the following from the command-line:
+From the directory into which you cloned this project, run the following from the command-line to start the service:
 `python server.py`
 
 Please reach out to James Weaver on Qiskit Slack (located at [qiskit.org](http://qiskit.org)) with questions or feedback.
