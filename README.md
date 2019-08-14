@@ -11,6 +11,6 @@ Flask/Python/Qiskit based HTTP service that runs Qiskit statevector and qasm sim
 - `pip install json_tricks`
 
 From the directory into which you cloned this project, run the following from the command-line to start the service:
-`python server.py`
+- `python server.py`
 
 Please reach out to James Weaver on Qiskit Slack (located at [qiskit.org](http://qiskit.org)) with questions or feedback.
