@@ -1,3 +1,4 @@
 qiskit>=0.10.0
 flask>=1.0.0
 json_tricks>=3.13.0
+gunicorn>=19.9.0
