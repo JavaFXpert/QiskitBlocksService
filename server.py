@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 from flask import Flask, jsonify, request
-from api import run_qasm, get_statevector
+from api import run_qasm, get_statevector, get_unitary
 import json_tricks
 
 app = Flask(__name__)
@@ -49,6 +49,19 @@ def statevector():
     print('backend: ', backend)
     print("^^^^^^^^^^^^^^")
     output = get_statevector(qasm, backend)
+    ret_val = json_tricks.dumps(output) # dump complex vector as json strings
+    return ret_val
+
+
+@app.route('/api/run/unitary', methods=['GET'])
+def unitary():
+    qasm = request.args['qasm']
+    backend = request.args['backend']
+    print("--------------")
+    print('qasm: ', qasm)
+    print('backend: ', backend)
+    print("^^^^^^^^^^^^^^")
+    output = get_unitary(qasm, backend)
     ret_val = json_tricks.dumps(output) # dump complex vector as json strings
     return ret_val
 
